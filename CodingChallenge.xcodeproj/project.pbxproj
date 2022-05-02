@@ -13,6 +13,18 @@
 		2349FD6D261E4F6A00A1FEAA /* CodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD6C261E4F6A00A1FEAA /* CodingChallengeTests.swift */; };
 		2349FD78261E4F6A00A1FEAA /* CodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD77261E4F6A00A1FEAA /* CodingChallengeUITests.swift */; };
 		2349FD89261E4F9900A1FEAA /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD88261E4F9900A1FEAA /* ShiftsView.swift */; };
+		CE1FD971281F49A6006213BA /* DateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FD970281F49A6006213BA /* DateViewCell.swift */; };
+		CE1FD973281F526D006213BA /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FD972281F526D006213BA /* BlueButtonView.swift */; };
+		CE1FD975281F553C006213BA /* ModalViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FD974281F553C006213BA /* ModalViewData.swift */; };
+		CE1FD977281F56A6006213BA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FD976281F56A6006213BA /* ModalView.swift */; };
+		CE229F492819D43200BF9A47 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE229F482819D43200BF9A47 /* RequestManager.swift */; };
+		CE229F552819DBC200BF9A47 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE229F542819DBC200BF9A47 /* Model.swift */; };
+		CE229F5D281A591600BF9A47 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE229F5C281A591600BF9A47 /* RequestModel.swift */; };
+		CE229F5F281A5CDE00BF9A47 /* CodingChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE229F5E281A5CDE00BF9A47 /* CodingChallengeService.swift */; };
+		CE229F62281A5F7300BF9A47 /* CodingChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE229F61281A5F7300BF9A47 /* CodingChallengeViewModel.swift */; };
+		CE244A96281B473800B76F4B /* DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE244A95281B473800B76F4B /* DateTimeFormatter.swift */; };
+		CE69D0D9281BAC6E000CF653 /* AvaliableShiftsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D0D8281BAC6E000CF653 /* AvaliableShiftsViewData.swift */; };
+		CE69D0DB281BB0DC000CF653 /* SingleShiftRowViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D0DA281BB0DC000CF653 /* SingleShiftRowViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +57,18 @@
 		2349FD77261E4F6A00A1FEAA /* CodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeUITests.swift; sourceTree = "<group>"; };
 		2349FD79261E4F6A00A1FEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2349FD88261E4F9900A1FEAA /* ShiftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsView.swift; sourceTree = "<group>"; };
+		CE1FD970281F49A6006213BA /* DateViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewCell.swift; sourceTree = "<group>"; };
+		CE1FD972281F526D006213BA /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		CE1FD974281F553C006213BA /* ModalViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewData.swift; sourceTree = "<group>"; };
+		CE1FD976281F56A6006213BA /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		CE229F482819D43200BF9A47 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		CE229F542819DBC200BF9A47 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CE229F5C281A591600BF9A47 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		CE229F5E281A5CDE00BF9A47 /* CodingChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeService.swift; sourceTree = "<group>"; };
+		CE229F61281A5F7300BF9A47 /* CodingChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeViewModel.swift; sourceTree = "<group>"; };
+		CE244A95281B473800B76F4B /* DateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormatter.swift; sourceTree = "<group>"; };
+		CE69D0D8281BAC6E000CF653 /* AvaliableShiftsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliableShiftsViewData.swift; sourceTree = "<group>"; };
+		CE69D0DA281BB0DC000CF653 /* SingleShiftRowViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleShiftRowViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +119,16 @@
 		2349FD59261E4F6900A1FEAA /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				2349FD5A261E4F6900A1FEAA /* CodingChallengeApp.swift */,
-				2349FD88261E4F9900A1FEAA /* ShiftsView.swift */,
-				2349FD5E261E4F6A00A1FEAA /* Assets.xcassets */,
 				2349FD63261E4F6A00A1FEAA /* Info.plist */,
+				2349FD5A261E4F6900A1FEAA /* CodingChallengeApp.swift */,
+				2349FD5E261E4F6A00A1FEAA /* Assets.xcassets */,
+				CE229F532819DBBD00BF9A47 /* Model */,
+				CE229F4A2819D50900BF9A47 /* Networking */,
 				2349FD60261E4F6A00A1FEAA /* Preview Content */,
+				CE244A94281B472800B76F4B /* Utils */,
+				CE1FD96F281F4996006213BA /* View */,
+				CE69D0D7281BAC5C000CF653 /* ViewData */,
+				CE229F60281A5F6A00BF9A47 /* ViewModel */,
 			);
 			path = CodingChallenge;
 			sourceTree = "<group>";
@@ -128,6 +157,61 @@
 				2349FD79261E4F6A00A1FEAA /* Info.plist */,
 			);
 			path = CodingChallengeUITests;
+			sourceTree = "<group>";
+		};
+		CE1FD96F281F4996006213BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2349FD88261E4F9900A1FEAA /* ShiftsView.swift */,
+				CE1FD970281F49A6006213BA /* DateViewCell.swift */,
+				CE1FD972281F526D006213BA /* BlueButtonView.swift */,
+				CE1FD976281F56A6006213BA /* ModalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE229F4A2819D50900BF9A47 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE229F5E281A5CDE00BF9A47 /* CodingChallengeService.swift */,
+				CE229F482819D43200BF9A47 /* RequestManager.swift */,
+				CE229F5C281A591600BF9A47 /* RequestModel.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE229F532819DBBD00BF9A47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE229F542819DBC200BF9A47 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE229F60281A5F6A00BF9A47 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE229F61281A5F7300BF9A47 /* CodingChallengeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE244A94281B472800B76F4B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE244A95281B473800B76F4B /* DateTimeFormatter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE69D0D7281BAC5C000CF653 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				CE69D0D8281BAC6E000CF653 /* AvaliableShiftsViewData.swift */,
+				CE69D0DA281BB0DC000CF653 /* SingleShiftRowViewData.swift */,
+				CE1FD974281F553C006213BA /* ModalViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +343,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1FD975281F553C006213BA /* ModalViewData.swift in Sources */,
+				CE69D0DB281BB0DC000CF653 /* SingleShiftRowViewData.swift in Sources */,
+				CE1FD977281F56A6006213BA /* ModalView.swift in Sources */,
+				CE1FD971281F49A6006213BA /* DateViewCell.swift in Sources */,
+				CE244A96281B473800B76F4B /* DateTimeFormatter.swift in Sources */,
+				CE229F5D281A591600BF9A47 /* RequestModel.swift in Sources */,
+				CE69D0D9281BAC6E000CF653 /* AvaliableShiftsViewData.swift in Sources */,
 				2349FD89261E4F9900A1FEAA /* ShiftsView.swift in Sources */,
+				CE229F492819D43200BF9A47 /* RequestManager.swift in Sources */,
 				2349FD5B261E4F6900A1FEAA /* CodingChallengeApp.swift in Sources */,
+				CE1FD973281F526D006213BA /* BlueButtonView.swift in Sources */,
+				CE229F5F281A5CDE00BF9A47 /* CodingChallengeService.swift in Sources */,
+				CE229F62281A5F7300BF9A47 /* CodingChallengeViewModel.swift in Sources */,
+				CE229F552819DBC200BF9A47 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

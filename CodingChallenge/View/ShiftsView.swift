@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct ShiftsView: View {
-    @State private var isExpanded: Bool = false
-    @State var isPresented: Bool = false // Creating a state
-
+    
     var body: some View {
         VStack {
             Text("Avaliable shift for current week")
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(viewModel.dates, id: \.self) { date in
-                        DayView(date: date)
-                            .onAppear {
-                                print("scroll \(date)")
-                            }
-                            .onTapGesture { viewModel.dateSelectedSubject.send(date) }
+                    if !viewModel.dates.isEmpty {
+                        ForEach(viewModel.dates, id: \.self) { date in
+                            DateViewCell(date: date)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10.0)
+                                        .stroke(lineWidth: 2.0)
+                                        .shadow(color: .blue, radius: 10.0)
+                                        .foregroundColor(.blue)
+                                )
+                                .onAppear {
+                                    print("scroll \(date)")
+                                }
+                                .onTapGesture { viewModel.dateSelectedSubject.send(date) }
+                        }
                     }
                 }
             }
@@ -32,7 +38,7 @@ struct ShiftsView: View {
             viewModel.onAppear()
         }
     }
-
+    
     @ViewBuilder private var shiftRowView: some View {
         if let selectedDateShifts = viewModel.selectedDateShifts?.shiftList {
             List {
@@ -40,40 +46,73 @@ struct ShiftsView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(rowData.title)
                             .font(.subheadline)
+                            .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .center)
-                        HStack {
-                            VStack {
-                                Button(action: { self.isPresented.toggle() }) {
-                                           Text("Show Details")
-                                       }.sheet(isPresented: $isPresented) {
-                                           Text("Close X")
-                                               .onTapGesture { self.isPresented.toggle() }
-                                       }
-                            }
-                            .padding(.trailing, 8)
-                            .overlay(
-                                Rectangle().fill(.blue).frame(width: 1),
-                                alignment: .trailing
-                            )
+                        HStack(alignment:.lastTextBaseline) {
                             timeRow(time: rowData.startTime, title: "Shift starts at: ")
                             timeRow(time: rowData.endTime, title: "Shift ends at: ")
+                            Spacer()
+                            VStack {
+                                Button(action: {
+                                    viewModel.isModalPresenter.toggle()
+                                    viewModel.showSelectedShiftDetails.send(rowData)
+                                }) {
+                                    Text("Details")
+                                        .font(.caption2)
+                                        .padding(8.0)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10.0)
+                                                .stroke(lineWidth: 2.0)
+                                                .shadow(color: .blue, radius: 10.0)
+                                        )
+                                }
+                                .sheet(isPresented: $viewModel.isModalPresenter) {
+                                    if let data = viewModel.modalViewData {
+                                        ModalView(title: data.title,
+                                                  distance: data.distance,
+                                                  premiumPay: data.payType,
+                                                  time: data.time,
+                                                  shiftType: data.shiftType,
+                                                  careType: data.careType) {
+                                            viewModel.isModalPresenter = false
+                                        }
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 8)
                         }
                     }
                 }
             }
         } else {
-            Text("No shifts for \(viewModel.dateSelectedSubject.value)")
+            Text("No shifts avaliable")
         }
     }
-
+    
     private func timeRow(time: String, title: String) -> some View {
         VStack {
             Text(title)
             Text(time)
+                .foregroundColor(.blue)
+                .fontWeight(.bold)
         }
         .font(.caption)
     }
-
+    
+    private var modalView: some View {
+        VStack {
+            Text("Close X")
+                .font(.caption2)
+                .padding(8.0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10.0)
+                        .stroke(lineWidth: 2.0)
+                        .shadow(color: .blue, radius: 10.0)
+                )
+                .onTapGesture { viewModel.isModalPresenter.toggle() }
+        }
+    }
+    
     @ObservedObject var viewModel: CodingChallengeViewModel
 }
 
